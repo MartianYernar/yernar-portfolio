@@ -49,11 +49,14 @@ document.querySelectorAll('.work-row').forEach(row => {
   let imgs = [];
   if (row.dataset.imgs) imgs = row.dataset.imgs.split(',').filter(Boolean).map(s => ({src:s,cap:''}));
   else if (row.dataset.clusters) row.dataset.clusters.split(',').filter(Boolean).forEach(k => { if (byKey[k]) imgs = imgs.concat(byKey[k].images); });
-  imgs = imgs.slice(0, 10);
   if (!imgs.length) return;
+  // ensure one "set" is wide enough (>=2200px) so the seamless x2 loop never gaps, however few images exist
+  const ITEM_W = 314; // 300px card + 14px gap
+  let set = imgs.slice();
+  while (set.length * ITEM_W < 2200) set = set.concat(imgs);
   const strip = document.createElement('div'); strip.className = 'w-strip';
   const track = document.createElement('div'); track.className = 'w-track';
-  imgs.concat(imgs).forEach(im => track.appendChild(card(im.src, im.cap || '', 'fc')));
+  set.concat(set).forEach(im => track.appendChild(card(im.src, im.cap || '', 'fc')));
   strip.appendChild(track); row.appendChild(strip);
 });
 
