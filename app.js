@@ -49,11 +49,12 @@ document.querySelectorAll('.work-row').forEach(row => {
   let imgs = [];
   if (row.dataset.imgs) imgs = row.dataset.imgs.split(',').filter(Boolean).map(s => ({src:s,cap:''}));
   else if (row.dataset.clusters) row.dataset.clusters.split(',').filter(Boolean).forEach(k => { if (byKey[k]) imgs = imgs.concat(byKey[k].images); });
-  imgs = imgs.slice(0, 4);
+  imgs = imgs.slice(0, 10);
   if (!imgs.length) return;
   const strip = document.createElement('div'); strip.className = 'w-strip';
-  imgs.forEach(im => strip.appendChild(card(im.src, im.cap || '', 'fc')));
-  row.appendChild(strip);
+  const track = document.createElement('div'); track.className = 'w-track';
+  imgs.concat(imgs).forEach(im => track.appendChild(card(im.src, im.cap || '', 'fc')));
+  strip.appendChild(track); row.appendChild(strip);
 });
 
 // ---- evidence: big image grids per cluster ----
