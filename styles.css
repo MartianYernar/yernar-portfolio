@@ -71,6 +71,7 @@ h2{font-family:"Archivo Black";font-size:clamp(30px,5vw,58px);margin-bottom:18px
 .focus-row p{color:var(--muted);max-width:60ch}
 
 /* featured work rows + hover fan (bigger) */
+.work{max-width:none;padding-left:clamp(22px,5vw,80px);padding-right:clamp(22px,5vw,80px)}
 .work-row{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:24px;padding:34px 6px;border-top:1px solid var(--bd);transition:.25s}
 .work-row:last-of-type{border-bottom:1px solid var(--bd)}
 .work-row:hover{padding-left:18px;background:linear-gradient(90deg,rgba(139,92,255,.10),transparent 60%)}
