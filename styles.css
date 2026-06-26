@@ -1,0 +1,86 @@
+:root{
+  --bg:#ffffff; --bg-alt:#f6f7f9; --ink:#16181d; --muted:#5b6470;
+  --line:#e6e8ec; --accent:#2f5fe0; --accent-ink:#1b3fa0; --card:#ffffff;
+  --radius:14px; --maxw:1040px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+
+/* nav */
+.nav{
+  position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;
+  padding:16px 24px;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.brand{font-weight:700;letter-spacing:-.01em}
+.nav nav a{color:var(--muted);margin-left:20px;font-size:15px}
+.nav nav a:hover{color:var(--accent)}
+
+/* layout */
+.section{max-width:var(--maxw);margin:0 auto;padding:72px 24px}
+.section.alt{background:var(--bg-alt);max-width:none}
+.section.alt>h2,.section.alt .honors,.section.alt .cta,.section.alt>p{max-width:var(--maxw);margin-left:auto;margin-right:auto}
+h2{font-size:28px;letter-spacing:-.02em;margin-bottom:28px}
+
+/* hero */
+.hero{max-width:var(--maxw);margin:0 auto;padding:88px 24px 56px}
+.eyebrow{color:var(--accent);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.08em}
+.hero h1{font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.03em;margin:14px 0 18px;max-width:18ch}
+.lede{font-size:19px;color:var(--muted);max-width:60ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  border:1px solid var(--line);padding:11px 20px;border-radius:999px;font-weight:600;font-size:15px;
+  transition:.15s;background:var(--card)
+}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.primary:hover{background:var(--accent-ink);color:#fff}
+
+/* project grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  display:flex;flex-direction:column;transition:.18s
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,24,40,.08)}
+.thumb{position:relative;aspect-ratio:16/9;background:#0e1633;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .ph{display:none;color:#aab4d8;font-weight:600;letter-spacing:.02em;font-size:15px}
+.thumb.noimg{background:linear-gradient(135deg,#1b2550,#2f5fe0)}
+.thumb.noimg .ph{display:flex;color:#dbe3ff}
+.body{padding:20px 22px 24px}
+.card h3{font-size:18px;letter-spacing:-.01em;margin-bottom:4px}
+.role{color:var(--accent-ink);font-size:13px;font-weight:600;margin-bottom:10px}
+.card p{font-size:15px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 10px}
+.tags span{font-size:12px;background:var(--bg-alt);border:1px solid var(--line);color:var(--muted);padding:4px 10px;border-radius:999px}
+.link{display:inline-block;color:var(--accent);font-weight:600;font-size:14px;margin-top:4px}
+.link:hover{color:var(--accent-ink)}
+.award{font-size:13px!important;color:var(--ink)!important;margin-top:12px;font-weight:600}
+
+/* honors */
+.honors{list-style:none;display:grid;gap:12px}
+.honors li{padding-left:20px;position:relative;color:var(--muted)}
+.honors li:before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.honors strong{color:var(--ink)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.skills h4{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:6px}
+.skills p{color:var(--muted);font-size:15px}
+
+/* contact + footer */
+.contact{text-align:center}
+.contact .cta{justify-content:center}
+.contact p{color:var(--muted)}
+.foot{text-align:center;padding:32px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+
+@media (max-width:600px){
+  .nav nav a{margin-left:14px;font-size:14px}
+  .section{padding:52px 20px}
+}
