@@ -3,151 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yernar Mars — AI &amp; hardware engineer</title>
-<meta name="description" content="Yernar Mars — building AI and hardware systems that remove manual bottlenecks, from low-dose medical imaging to autonomous environmental robots.">
+<title>Yernar Mars — AI &amp; Hardware Engineer</title>
+<meta name="description" content="17-year-old engineer and researcher from Astana. Medical-imaging AI, autonomous robots, award-winning hardware, and a peer-to-peer STEM academy.">
+<meta property="og:title" content="Yernar Mars — AI & Hardware Engineer">
+<meta property="og:description" content="Medical-imaging AI, autonomous robots, international medals, and real-world builds.">
+<meta property="og:image" content="images/hero-avatar.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="nav">
+<header class="nav" id="nav">
   <a href="#top" class="brand">Yernar&nbsp;Mars</a>
-  <nav>
+  <nav class="nav-links" id="navlinks">
     <a href="#work">Work</a>
-    <a href="#honors">Honors</a>
-    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#gallery">Evidence</a>
+    <a href="#press">Press</a>
     <a href="#contact">Contact</a>
+    <a href="cv.pdf" class="nav-cv" target="_blank">CV ↗</a>
   </nav>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
 </header>
 
 <section id="top" class="hero">
-  <p class="eyebrow">Astana, Kazakhstan</p>
-  <h1>I build AI&nbsp;+&nbsp;hardware systems that remove manual&nbsp;bottlenecks.</h1>
-  <p class="lede">
-    17-year-old engineer and researcher. From a low-dose medical-imaging AI to
-    autonomous robots and a peer-to-peer STEM academy — I build things that get
-    used, not just demoed.
-  </p>
-  <div class="cta">
-    <a class="btn primary" href="https://github.com/MartianYernar">GitHub</a>
-    <a class="btn" href="https://www.linkedin.com/in/yernar-mars">LinkedIn</a>
-    <a class="btn" href="mailto:mars.e@nisa.edu.kz">Email</a>
+  <div class="hero-glow"></div>
+  <div class="hero-inner reveal">
+    <p class="eyebrow">Astana, Kazakhstan · NIS IB Diploma</p>
+    <h1>I engineer AI&nbsp;&amp;&nbsp;hardware that removes<br><span class="grad-text">manual bottlenecks.</span></h1>
+    <p class="lede">17-year-old builder and researcher. From a low-dose medical-imaging AI mentored by 7 university professors, to autonomous robots and international medals — I build things that get <em>used</em>, not just demoed.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">View my work</a>
+      <a class="btn" href="cv.pdf" target="_blank">Download CV</a>
+      <a class="btn ghost" href="https://github.com/MartianYernar" target="_blank">GitHub</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/yernar-mars" target="_blank">LinkedIn</a>
+    </div>
   </div>
+</section>
+
+<section class="metrics reveal">
+  <div class="metric"><span class="num">3</span><span class="lbl">International robotics medals</span></div>
+  <div class="metric"><span class="num">610K+</span><span class="lbl">KZT in prize money</span></div>
+  <div class="metric"><span class="num">7</span><span class="lbl">University professors mentoring my research</span></div>
+  <div class="metric"><span class="num">1,195</span><span class="lbl">Students in my STEM community</span></div>
 </section>
 
 <section id="work" class="section">
-  <h2>Featured work</h2>
+  <h2 class="reveal">Featured work</h2>
   <div class="grid">
 
-    <article class="card">
-      <div class="thumb"><img src="images/research.jpg" alt="Minimum-dose PH screening"
-        onerror="this.parentNode.classList.add('noimg');this.remove();"><span class="ph">CT&nbsp;research</span></div>
+    <article class="card reveal">
+      <div class="thumb"><img src="images/hero-research.png" alt="Dose-accuracy curve" loading="lazy"></div>
       <div class="body">
-        <h3>Minimum-dose, contrast-free PH screening</h3>
-        <p class="role">Lead student researcher · mentored by 7 NU professors &amp; a UMC cardiologist</p>
-        <p>An AI pipeline that measures pulmonary-artery and aorta diameters on
-        low-dose, non-contrast chest CT and finds the lowest radiation dose at
-        which screening stays reliable — with per-scan uncertainty and a
-        too-noisy-to-trust flag. Segmentation held 12/12 across a 2.6× dose range.</p>
-        <div class="tags"><span>Medical AI</span><span>TotalSegmentator</span><span>Imaging physics</span></div>
-        <a class="link" href="https://github.com/MartianYernar/low-dose-ph-screening">View code →</a>
+        <span class="kicker">Medical AI research</span>
+        <h3>HeartCareAI — minimum-dose PH screening</h3>
+        <p class="role">Lead researcher · mentored by 7 NU professors &amp; a UMC cardiologist</p>
+        <p>An AI pipeline measuring pulmonary-artery and aorta diameters on low-dose, non-contrast chest CT — finding the lowest radiation dose at which screening stays reliable, with per-scan uncertainty and a too-noisy-to-trust flag. Segmentation held 12/12 across a 2.6× dose range.</p>
+        <div class="tags"><span>Medical AI</span><span>Imaging physics</span><span>Python · PyTorch</span></div>
+        <a class="link" href="https://github.com/MartianYernar/low-dose-ph-screening" target="_blank">View code ↗</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="thumb"><img src="images/smartgarbage.jpg" alt="SmartGarbage bin"
-        onerror="this.parentNode.classList.add('noimg');this.remove();"><span class="ph">Smart&nbsp;bin</span></div>
+    <article class="card reveal">
+      <div class="thumb"><img src="images/hero-avatar.jpg" alt="Avatar competition robot" loading="lazy"></div>
       <div class="body">
-        <h3>SmartGarbage (KokysGet) — vision waste sorter</h3>
+        <span class="kicker">Competitive robotics</span>
+        <h3>Avatar — autonomous competition robot</h3>
+        <p class="role">Builder &amp; programmer</p>
+        <p>The robot behind my international podiums: autonomous hardware control and vision, built and tuned for the world's toughest student robotics arenas.</p>
+        <div class="tags"><span>Robotics</span><span>Computer vision</span><span>Embedded</span></div>
+        <p class="award">🥈 World Robot Olympiad 2026 — 2nd · 🥉 Infomatrix Asia 2026 — Bronze (top 0.2%)</p>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="thumb"><img src="images/hero-smartgarbage.jpg" alt="SmartGarbage bin" loading="lazy"></div>
+      <div class="body">
+        <span class="kicker">Hardware + ML</span>
+        <h3>SmartGarbage (KokysGet) — AI waste sorter</h3>
         <p class="role">Founder · hardware, ML &amp; deployment</p>
-        <p>A bin that sees a piece of waste and sorts it automatically into
-        organic / glass / plastic / paper. YOLOv8 trained on ~800 self-labeled
-        images, ESP32 camera → Raspberry Pi inference → servo sorting, 3D-printed
-        chassis. Built as a full-sized working unit.</p>
-        <div class="tags"><span>YOLOv8</span><span>ESP32 / RPi</span><span>3D printing</span></div>
-        <a class="link" href="https://github.com/MartianYernar/SmartGarbage">View code →</a>
-        <p class="award">🏆 BECO Hackathon 2025 — 1st · Infomatrix Asia 2025 — Bronze</p>
+        <p>A bin that sees a piece of waste and sorts it automatically into organic / glass / plastic / paper. YOLOv8 trained on ~800 self-labeled images, ESP32 camera → Raspberry Pi inference → servo sorting, 3D-printed chassis. Built as a full-sized working unit.</p>
+        <div class="tags"><span>YOLOv8</span><span>ESP32 · RPi</span><span>3D printing</span></div>
+        <a class="link" href="https://github.com/MartianYernar/SmartGarbage" target="_blank">View code ↗</a>
+        <p class="award">🏆 BECO Hackathon 2025 — 1st · 🥉 Infomatrix Asia 2025 — Bronze</p>
       </div>
     </article>
 
-    <article class="card">
-      <div class="thumb"><img src="images/soilyget.jpg" alt="SoilyGet robot"
-        onerror="this.parentNode.classList.add('noimg');this.remove();"><span class="ph">Soil&nbsp;robot</span></div>
+    <article class="card reveal">
+      <div class="thumb"><img src="images/hero-soilyget.jpg" alt="SoilyGet robot" loading="lazy"></div>
       <div class="body">
+        <span class="kicker">Autonomous robotics</span>
         <h3>SoilyGet — autonomous soil-monitoring robot</h3>
         <p class="role">Lead hardware &amp; systems engineer</p>
-        <p>A full-sized wheeled robot that autonomously augers soil to 25&nbsp;cm
-        with a servo-driven 4-joint manipulator (Fusion&nbsp;360, custom 3D-printed
-        parts). pXRF + field sensors feed an AI soil-contamination map.
-        First-authored research paper.</p>
+        <p>A full-sized wheeled robot that autonomously augers soil to 25&nbsp;cm with a servo-driven 4-joint manipulator (Fusion 360, custom 3D-printed parts). pXRF + field sensors feed an AI soil-contamination map. First-authored research paper.</p>
         <div class="tags"><span>Robotics</span><span>Fusion 360</span><span>Sensing</span></div>
-        <p class="award">🏆 National RSPC “Daryn” — 3rd place (Robotics)</p>
+        <p class="award">🥉 National RSPC “Daryn” — 3rd place (Robotics)</p>
       </div>
     </article>
 
-    <article class="card">
-      <div class="thumb"><img src="images/automation.jpg" alt="AI automation for clinics"
-        onerror="this.parentNode.classList.add('noimg');this.remove();"><span class="ph">Clinic&nbsp;AI</span></div>
+    <article class="card reveal">
+      <div class="thumb grad"><span>Clinic&nbsp;AI</span></div>
       <div class="body">
+        <span class="kicker">Applied LLMs</span>
         <h3>AI automation for clinics</h3>
         <p class="role">Founder &amp; developer</p>
-        <p>Building and piloting LLM-based reply and booking assistants
-        (website chat + Instagram/Facebook DMs) to clear the administrative
-        backlog that delays patient appointments.</p>
-        <div class="tags"><span>LLM apps</span><span>Next.js / Nest.js</span><span>Automation</span></div>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="thumb"><img src="images/mentoria.jpg" alt="Mentoria academy"
-        onerror="this.parentNode.classList.add('noimg');this.remove();"><span class="ph">Mentoria</span></div>
-      <div class="body">
-        <h3>Mentoria — peer-to-peer STEM academy</h3>
-        <p class="role">Co-founder &amp; director</p>
-        <p>A peer-to-peer learning community (1,195-member opportunities channel;
-        peer-teaching groups across math, physics, CS, SAT, IELTS) that hosted a
-        free national hackathon at Nazarbayev University with a 1,000,000&nbsp;KZT
-        prize pool.</p>
-        <div class="tags"><span>Education</span><span>Community</span><span>Events</span></div>
+        <p>Building and piloting LLM-based reply and booking assistants (website chat + Instagram/Facebook DMs) to clear the administrative backlog that delays patient appointments.</p>
+        <div class="tags"><span>LLM apps</span><span>Next.js · Nest.js</span><span>Automation</span></div>
       </div>
     </article>
 
   </div>
 </section>
 
-<section id="honors" class="section alt">
-  <h2>Selected honors</h2>
-  <ul class="honors">
-    <li><strong>Infomatrix Asia</strong> — International. Bronze 2026 (6th of 3,000, top 0.2%, 13 countries).</li>
+<section id="experience" class="section alt">
+  <h2 class="reveal">Experience</h2>
+  <div class="timeline">
+    <div class="t-item reveal"><div class="t-dot"></div>
+      <div class="t-body"><span class="t-date">Jun 2026 – Present</span>
+        <h3>Software Engineer Intern</h3><p class="t-org">Q Applications · EdTech startup ($2M valuation), Astana Hub</p>
+        <p>1 of 3 interns chosen from 30 applicants. Build and debug Next.js / Nest.js features, test in Docker, and ship via mentor-reviewed pull requests.</p></div></div>
+    <div class="t-item reveal"><div class="t-dot"></div>
+      <div class="t-body"><span class="t-date">Dec 2025 – Present</span>
+        <h3>Co-Founder &amp; Director</h3><p class="t-org">Mentoria · peer-to-peer STEM academy (Remote)</p>
+        <p>Non-profit creating competitions and peer-to-peer learning. Grew a 1,195-member community and ran a free national hackathon at Nazarbayev University with a 1,000,000 KZT prize pool.</p></div></div>
+    <div class="t-item reveal"><div class="t-dot"></div>
+      <div class="t-body"><span class="t-date">Aug 2024 – Present</span>
+        <h3>Founder &amp; Lead Researcher</h3><p class="t-org">HeartCareAI · medical-imaging research, Astana</p>
+        <p>Low-dose, contrast-free pulmonary-hypertension screening, mentored by 7 NU professors and a UMC cardiologist.</p></div></div>
+    <div class="t-item reveal"><div class="t-dot"></div>
+      <div class="t-body"><span class="t-date">Oct 2025 – May 2026</span>
+        <h3>Lead Programmer (Java)</h3><p class="t-org">FIRST Tech Challenge · Team Spirit</p>
+        <p>Programmed the competition robot; 5–3 record; advanced the team to the Central Asia stage (21st of 40).</p></div></div>
+    <div class="t-item reveal"><div class="t-dot"></div>
+      <div class="t-body"><span class="t-date">Jun 2026</span>
+        <h3>Hackathon Judge</h3><p class="t-org">Nazarbayev Intellectual Schools</p>
+        <p>Judged a student hackathon and selected the winning teams.</p></div></div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <h2 class="reveal">Awards &amp; evidence</h2>
+  <p class="section-sub reveal">Certificates, medals, ceremonies, builds — the proof behind every line. Click any image to enlarge.</p>
+  <div class="filters reveal" id="filters">
+    <button class="chip active" data-cat="all">All</button>
+    <button class="chip" data-cat="awards">Awards</button>
+    <button class="chip" data-cat="projects">Projects</button>
+    <button class="chip" data-cat="moments">Moments</button>
+    <button class="chip" data-cat="experience">Experience</button>
+  </div>
+  <div class="gallery" id="gallery-grid"></div>
+</section>
+
+<section id="press" class="section alt">
+  <h2 class="reveal">Press &amp; features</h2>
+  <div class="press-grid">
+    <a class="press reveal" href="https://www.instagram.com/qrnews.kz/reel/DWY05f5ggLf/" target="_blank"><span class="src">qrnews.kz · news</span><span class="ttl">Featured for Infomatrix Asia 2026 success →</span></a>
+    <a class="press reveal" href="https://www.instagram.com/p/DHDo2VoNzRp/" target="_blank"><span class="src">News page</span><span class="ttl">Olympiad success feature →</span></a>
+    <a class="press reveal" href="https://www.instagram.com/nis_astana_ib/p/DWiWt0WDBV4/" target="_blank"><span class="src">NIS Astana</span><span class="ttl">Bronze — Infomatrix Asia 2026 →</span></a>
+    <a class="press reveal" href="https://www.instagram.com/nis_astana_ib/reel/DH5sIHqpe_s/" target="_blank"><span class="src">NIS Astana</span><span class="ttl">Bronze — Infomatrix Asia 2025 →</span></a>
+    <a class="press reveal" href="https://www.instagram.com/nis_astana_ib/p/DIx-EQ2iA7L/" target="_blank"><span class="src">NIS Astana</span><span class="ttl">1st — BECO Hackathon (150K KZT) →</span></a>
+    <a class="press reveal" href="https://www.instagram.com/nis_astana_ib/p/DHS27kaMCNt/" target="_blank"><span class="src">NIS Astana</span><span class="ttl">1st — Young Visionaries Shark Tank →</span></a>
+    <a class="press reveal" href="https://www.instagram.com/nis_astana_ib/p/DV8PO2Tid00/" target="_blank"><span class="src">NIS Astana</span><span class="ttl">International Startup Cup →</span></a>
+    <a class="press reveal" href="https://www.instagram.com/nis_astana_ib/p/DWgIJHiDEuT/" target="_blank"><span class="src">NIS Astana</span><span class="ttl">3rd — National NIS Hack →</span></a>
+    <a class="press reveal" href="https://t.me/+g3LCWJIvCcw5YjEy" target="_blank"><span class="src">Telegram</span><span class="ttl">Mentoria community →</span></a>
+  </div>
+</section>
+
+<section id="honors" class="section">
+  <h2 class="reveal">Selected honors</h2>
+  <ul class="honors reveal">
+    <li><strong>Infomatrix Asia</strong> — International. Bronze 2026 (6th of 3,000, top 0.2%, 13 countries) &amp; 2025.</li>
     <li><strong>World Robot Olympiad 2026</strong> — 2nd place (Astana); qualified for the National stage.</li>
-    <li><strong>FIRST Tech Challenge 2026</strong> — Motivate, Reach &amp; Winning Alliance Captain awards; Central Asia stage.</li>
+    <li><strong>FIRST Tech Challenge 2026</strong> — Motivate, Reach &amp; Winning Alliance Captain awards.</li>
     <li><strong>National RSPC “Daryn”</strong> — 3rd place, Robotics &amp; Intelligent Machines.</li>
-    <li><strong>“Orken” Presidential Merit Scholarship</strong> — full 6-year funding; ranked 4th of 2,000+ (top 0.2%).</li>
-    <li><strong>Startup &amp; hackathon wins</strong> — 610,000+ KZT in prizes; multiple 1st-place finishes.</li>
+    <li><strong>National Fibonacci Robot Olympiad</strong> — 3rd (2026); Judges' Choice (2025); international finals, Turkey.</li>
+    <li><strong>“Orken” Presidential Merit Scholarship</strong> — full 6-year (~$25K); 4th of 2,000+ (top 0.2%).</li>
+    <li><strong>Startup &amp; hackathon wins</strong> — 610,000+ KZT; multiple 1st-place finishes.</li>
     <li><strong>Selective 2026 programs</strong> — Pioneer Academics Research · LaunchX · NYU Pre-College.</li>
   </ul>
 </section>
 
-<section id="skills" class="section">
-  <h2>Skills</h2>
-  <div class="skills">
+<section id="skills" class="section alt">
+  <h2 class="reveal">Skills</h2>
+  <div class="skills reveal">
     <div><h4>Programming</h4><p>Python, Java, C/C++ (Arduino), JavaScript (Next.js / Nest.js)</p></div>
     <div><h4>ML / AI</h4><p>PyTorch, YOLOv8, nnU-Net / TotalSegmentator, computer vision, LLM apps</p></div>
     <div><h4>Hardware &amp; tools</h4><p>ESP32 / Raspberry Pi, 3D printing, Onshape &amp; Fusion 360, Docker, Git</p></div>
-    <div><h4>Languages</h4><p>Kazakh (native), Russian (fluent), English (fluent)</p></div>
+    <div><h4>Languages</h4><p>Kazakh (native), Russian (fluent), English (fluent, IB English B HL)</p></div>
   </div>
 </section>
 
-<section id="contact" class="section alt contact">
-  <h2>Get in touch</h2>
+<section id="contact" class="section contact reveal">
+  <h2>Let's build something</h2>
   <p>Astana, Kazakhstan</p>
   <div class="cta">
     <a class="btn primary" href="mailto:mars.e@nisa.edu.kz">mars.e@nisa.edu.kz</a>
-    <a class="btn" href="https://github.com/MartianYernar">GitHub</a>
-    <a class="btn" href="https://www.linkedin.com/in/yernar-mars">LinkedIn</a>
+    <a class="btn ghost" href="https://github.com/MartianYernar" target="_blank">GitHub</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/yernar-mars" target="_blank">LinkedIn</a>
+    <a class="btn ghost" href="cv.pdf" target="_blank">CV</a>
   </div>
 </section>
 
-<footer class="foot">© <span id="yr"></span> Yernar Mars</footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<footer class="foot">© <span id="yr"></span> Yernar Mars · Astana, Kazakhstan</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <figure class="lb-fig"><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+</div>
+
+<script src="gallery.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
