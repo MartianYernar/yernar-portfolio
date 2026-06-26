@@ -51,9 +51,9 @@ document.querySelectorAll('.work-row').forEach(row => {
   else if (row.dataset.clusters) row.dataset.clusters.split(',').filter(Boolean).forEach(k => { if (byKey[k]) imgs = imgs.concat(byKey[k].images); });
   imgs = imgs.slice(0, 4);
   if (!imgs.length) return;
-  const fan = document.createElement('div'); fan.className = 'w-fan';
-  imgs.forEach(im => fan.appendChild(card(im.src, im.cap, 'fc')));
-  setIdx(fan); row.appendChild(fan);
+  const strip = document.createElement('div'); strip.className = 'w-strip';
+  imgs.forEach(im => strip.appendChild(card(im.src, im.cap || '', 'fc')));
+  row.appendChild(strip);
 });
 
 // ---- evidence: big image grids per cluster ----
