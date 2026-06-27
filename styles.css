@@ -79,8 +79,13 @@ h2{font-family:"Archivo Black";font-size:clamp(30px,5vw,58px);margin-bottom:18px
 .work-row:hover .num{color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
 .w-main{flex:1;z-index:2}
 .work-row h3{font-size:clamp(21px,2.6vw,32px);margin-bottom:5px}
+.work-row h3 a:hover{text-decoration:underline}
 .work-row p{color:var(--muted);font-size:15px;max-width:62ch}
-.w-tag{color:var(--c);font-weight:600;font-size:14px;white-space:nowrap;z-index:2}
+.w-side{display:flex;align-items:center;gap:10px;z-index:2}
+.w-tag{color:var(--c);font-weight:600;font-size:14px;white-space:nowrap}
+.yt-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid var(--bd);color:#fff;transition:.2s;flex:none}
+.yt-btn:hover{background:#ff0033;border-color:#ff0033;transform:translateY(-2px)}
+.yt-btn svg{width:15px;height:15px;fill:currentColor}
 .w-strip{flex-basis:100%;max-height:0;overflow:hidden;opacity:0;transition:max-height .5s cubic-bezier(.2,.8,.2,1),opacity .4s,margin-top .4s}
 .work-row:hover .w-strip{max-height:240px;opacity:1;margin-top:20px}
 .w-track{display:flex;gap:14px;width:max-content;animation:wscroll 45s linear infinite}
