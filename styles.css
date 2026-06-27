@@ -83,12 +83,15 @@ h2{font-family:"Archivo Black";font-size:clamp(30px,5vw,58px);margin-bottom:18px
 .work-row p{color:var(--muted);font-size:15px;max-width:62ch}
 .w-side{display:flex;align-items:center;gap:10px;z-index:2}
 
-/* animated rotating-gradient border ("border beam") for code/youtube buttons */
-@keyframes spinBorder{to{transform:rotate(360deg)}}
+/* animated flowing-gradient border for code/youtube buttons.
+   A rotating conic-gradient looks distorted on non-circular (pill/rect) shapes
+   since a radial sweep isn't symmetric on a rectangle; a linear gradient that
+   slides sideways in a loop stays smooth on any shape. */
+@keyframes borderFlow{to{background-position:-250% 0}}
 .icon-btn{position:relative;display:inline-flex;border-radius:10px;padding:2px;flex:none;transition:transform .2s}
 .icon-btn:hover{transform:translateY(-2px)}
-.icon-btn .ring{position:absolute;inset:0;border-radius:inherit;background:conic-gradient(from 0deg,var(--v),var(--c),var(--p),var(--v));animation:spinBorder 3s linear infinite;z-index:0}
-.icon-btn:hover .ring{animation-duration:1s}
+.icon-btn .ring{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,var(--v),var(--c),var(--p),var(--v),var(--c));background-size:250% 100%;animation:borderFlow 5s linear infinite;z-index:0}
+.icon-btn:hover .ring{animation-duration:1.8s}
 .icon-btn .inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:7px;width:100%;height:100%;background:#0d0f1a;border-radius:8px;color:#fff;font-weight:600;font-size:13px;white-space:nowrap}
 .icon-btn.yt{width:46px;height:32px}
 .icon-btn.yt .inner svg{width:24px;height:17px}
@@ -97,6 +100,8 @@ h2{font-family:"Archivo Black";font-size:clamp(30px,5vw,58px);margin-bottom:18px
 .icon-btn.yt-wide .inner{padding:0 16px;height:38px}
 .icon-btn.yt-wide .inner svg{width:22px;height:16px;flex:none}
 .yt-channels{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.hero-yt{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:26px}
+.hero-yt-label{color:var(--muted);font-size:13.5px;font-weight:600}
 .w-strip{flex-basis:100%;max-height:0;overflow:hidden;opacity:0;transition:max-height .5s cubic-bezier(.2,.8,.2,1),opacity .4s,margin-top .4s}
 .work-row:hover .w-strip{max-height:240px;opacity:1;margin-top:20px}
 .w-track{display:flex;gap:14px;width:max-content;animation:wscroll 45s linear infinite}
